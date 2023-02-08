@@ -10,6 +10,10 @@ module.exports = (oldName, newName, email, mobile) => {
     // ambil index data yang akan diupdate
     const indexOldData = dataContacts.findIndex(x => x.name.toLowerCase() === oldName.toLowerCase());
 
+    if (indexOldData === -1) {
+        console.log(`Data ${oldName} tidak ditemukan`);
+        return false
+    }
 
     if (newName) {
         if (findPk(newName)) {

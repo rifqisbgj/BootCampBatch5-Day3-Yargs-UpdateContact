@@ -57,4 +57,5 @@ module.exports = (name, email, mobile) => {
 
     // kemudian data tersebut ke contacts.json
     fs.writeFileSync('./data/contacts.json', JSON.stringify(user));
+    console.log("Data berhasil ditambahkan");
 }
